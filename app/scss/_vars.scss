@@ -1,0 +1,13 @@
+$title: #5555FC;
+$default: #FFFF;
+
+%button{
+    border-radius: 32px;
+    background-color: $title;
+    cursor: pointer;
+    color: $default;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    filter: drop-shadow(0px 1px 10px #4F4FEB);
+}
