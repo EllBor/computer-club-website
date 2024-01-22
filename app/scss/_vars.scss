@@ -11,3 +11,9 @@ $default: #FFFF;
     border: none;
     filter: drop-shadow(0px 1px 10px #4F4FEB);
 }
+
+%title-style{
+    font-size: 32px;
+    font-weight: 700;
+    word-wrap: break-word;
+}

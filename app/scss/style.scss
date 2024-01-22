@@ -125,10 +125,8 @@
     }
 
     &__title{
-        font-size: 32px;
+        @extend %title-style;
         width: 555px;
-        font-weight: 700;
-        word-wrap: break-word;
         margin-top: 70px;
         &::before{
             content: '';
@@ -246,9 +244,8 @@
    margin-bottom: 100px;
    margin-top: 130px;
     &__title{
-        font-size: 32px;
+        @extend %title-style;
         width: 462px;
-        font-weight: 700;
         margin: 0 auto;
         margin-bottom: 124px;
         text-align: center;
@@ -338,5 +335,132 @@
     &__social{
         display: flex;
         gap: 24px;
+    }
+}
+
+.services{
+    background-color: #FFF;
+    height: 723px;
+    &__title{
+        @extend %title-style;
+        text-align: center;
+        width: 512px;
+        margin: 0 auto;
+        color:#5555FC;
+        span{
+            color: black;
+        }
+        padding-top: 90px;
+        padding-bottom: 120px;
+    }
+
+    &__box-list{
+        display: flex;
+        flex-wrap:wrap;
+        gap: 90px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list-item{
+        width: 344px;
+        border-radius: 40px;
+        border: 4px solid rgba(22, 22, 22, 0.08);
+        line-height: 20px;
+        padding: 22px 44px;
+        color: black;
+        word-wrap: break-word;
+        font-weight: 500;
+        text-align: center;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 52px;
+            height: 52px;
+            top: -66px;
+            left: 140px;
+        }
+        span{
+            color: black;
+            opacity: .6;
+            font-weight: 500;
+        }
+    }
+    
+    &__list-item--setting::after{
+        background-image: url(../images/icon-setting-blue.svg);
+        width: 53px;
+    }
+
+    &__list-item--maintenance::after{
+        background-image: url(../images/icon-joystick1.svg);
+        width: 776px;
+        height: 107px;
+        top: -66px;
+        left: -221px;
+    }
+
+    &__list-item--delivery::after{
+        background-image: url(../images/icon-auto.svg);
+        width: 53px;
+    }
+    
+    &__list-item--software::after{
+        background-image: url(../images/icon-keyboard.svg);
+        width: 53px;
+        height: 53px;
+        top: 98px;
+      
+    }
+
+    &__list-item--flash::after{
+        background-image: url(../images/icon-flash1.svg);
+        width: 776px;
+        height: 109px;
+        top: 42px;
+        left: -222px;
+    }
+
+    &__list-item--marketing::after{
+        background-image: url(../images/icon-smartphone.svg);
+        width: 53px;
+        height: 53px;
+        top: 98px;
+    }
+}
+
+.stages{
+    margin-top: 100px;
+    &__title{
+        @extend %title-style;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    &__list-item{
+        margin: 0 auto;
+    }
+
+    &__item-title{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 27px;
+        margin-bottom: 24px;
+        margin-top: 90px;
+    }
+
+    &__item-text{
+        font-size: 18px;
+        font-weight: 300;
+        width: 350px;
+        opacity: .6;
+        line-height: 25px;
     }
 }
