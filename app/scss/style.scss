@@ -10,7 +10,8 @@
         justify-content: space-between;
         align-items: center;
         height: 66px;
-        padding-top: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     &__list{
@@ -22,6 +23,21 @@
         font-size: 16px;
         color: $default;
         font-weight: 500;
+        display: inline-block;
+    }
+
+    &__list-link::after{
+            content: '';
+            display: block;
+            background-color:  #5555FC;
+            width: 0%;
+            height: 3px;
+            transition: width 0.3s ease-in-out;
+    }
+
+    &__list-link:hover:after,
+    &__list-link:focus:after {
+        width: 100%;
     }
 
     &__phone{
@@ -48,14 +64,13 @@
 }
 
 .top{
-    top: -67px;
-    position: relative;
-
+    margin-bottom: 120px;
+    margin-top: -35px;
     &__inner{
         display: flex;
         justify-content: center;
         align-items: center;
-
+        margin-top: 0;
     }
 
     &__content{
@@ -81,11 +96,12 @@
             background-image: url(../images/top-keyboard.svg);
             width: 37px;
             height: 37px;
-            left: 0;        
+            left: 0;       
         }
     }
 
     &__content-btn{
+        display: block;
         @extend %button;
         padding: 25px 15px;
         width: 219px;
@@ -217,12 +233,12 @@
 
 .help{
    margin-bottom: 100px;
-   margin-top: 130px;
+   margin-top: 100px;
     &__title{
         @extend %title-style;
         width: 462px;
         margin: 0 auto;
-        margin-bottom: 124px;
+        margin-bottom: 120px;
         text-align: center;
         word-wrap: break-word;
     }
@@ -333,7 +349,7 @@
     }
 
     &__list-item--maintenance::after{
-        background-image: url(../images/icon-joystick1.svg);
+        background-image: url(../images/icon-joystick.svg);
         width: 776px;
         height: 107px;
         top: -66px;
@@ -354,7 +370,7 @@
     }
 
     &__list-item--flash::after{
-        background-image: url(../images/icon-flash1.svg);
+        background-image: url(../images/icon-flash.svg);
         width: 776px;
         height: 109px;
         top: 42px;
@@ -370,21 +386,36 @@
 }
 
 .stages{
-    margin-top: 100px;
+    margin-top: 50px;
     &__title{
         @extend %title-style;
         margin: 0 auto;
         text-align: center;
+        padding-top: 90px;
     }
 
     &__list{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
+        counter-reset: number;
     }
 
     &__list-item{
         margin: 0 auto;
+        position: relative;
+    }
+
+    &__list-item::before{
+        counter-increment: number;
+        content: '0'counter(number);
+        position: absolute;
+        color: $title;
+        font-size: 24px;
+        font-weight: 900;
+        top: 142px;
+        left: -58px;
+
     }
 
     &__item-title{
@@ -405,9 +436,10 @@
 }
 
 .request{
-    margin-top: 100px;
+    margin-top: 110px;
     &__inner{
         display: flex;
+        padding-top: 90px;
     }
     &__left-title{
         @extend %title-style;
@@ -434,17 +466,19 @@
     }
     &__form-input{
         background-color: transparent;
-        border: none;
+        color: #FFF;
+        font-weight: 500;
         width: 530px;
+        border: none;
         border-bottom: 2px solid $title;
-        padding-bottom: 32px;
+        padding-right: 20px;
+        padding-bottom: 25px;
         margin-bottom: 40px;
         &::placeholder{
             color: #FFF;
             opacity: 0.56;
             font-size: 18px;
             font-weight: 300;
-           
         }
     }
     &__right-form{
@@ -458,10 +492,13 @@
         resize: none;
         width: 530px;
         height: 122px;
-        padding: 31px 80px 24px 39px;
+        padding: 30px 80px 24px 40px;
         margin-bottom: 50px;
+        color: #FFF;
+        font-weight: 500;
         &::placeholder{
             color: #FFF;
+            opacity: 0.56;
             font-size: 16px;
             font-weight: 300;
         }
