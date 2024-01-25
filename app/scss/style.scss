@@ -1,7 +1,5 @@
 @import 'vars';
-@import 'fonts';
 @import 'reset';
-@import 'libs';
 @import 'global';
 
 .header{
@@ -148,6 +146,7 @@
         text-align: right;
         width: 150px;
         margin: 0 auto;
+        opacity: 0.24;
         &::after{
             content: '';
             position: absolute;
@@ -155,6 +154,11 @@
             height: 24px;
             margin-left: 16px;
         }
+    }
+
+    &__list-item--active{
+        color: $default;
+        opacity: 1.0;
     }
 
     &__list-item--word::after{
@@ -190,6 +194,11 @@
         text-align: right;
         width: 455px;
         margin: -129px 177px;
+        display: none;
+    }
+
+    &__dropdown--active{
+        display: block;
     }
 
     &__dropdown-title{
@@ -272,7 +281,7 @@
         color: rgba(255, 255, 255, 0.72);
         margin: 0 auto;
     }
-
+    
     &__list-item:nth-child(odd){
         text-align: right;
         margin-left: 125px;
