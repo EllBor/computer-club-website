@@ -147,6 +147,7 @@
         width: 150px;
         margin: 0 auto;
         opacity: 0.24;
+        cursor: pointer;
         &::after{
             content: '';
             position: absolute;
@@ -304,6 +305,7 @@
 
 .services{
     background-color: #FFF;
+    width: 110%;
     height: 723px;
     &__title{
         @extend %title-style;
@@ -390,7 +392,7 @@
         background-image: url(../images/icon-smartphone.svg);
         width: 53px;
         height: 53px;
-        top: 98px;
+        top: 85px;
     }
 }
 
@@ -555,5 +557,141 @@
     &__social{
         display: flex;
         gap: 24px;
+    }
+}
+
+@media(max-width: 1600px){
+    .container{
+        max-width: 1100px;
+    }
+    .top__inner {
+        justify-content: space-between;
+    }
+    .request__inner{
+        padding-top: 48px;
+        margin-bottom: 50px;
+    }
+    .services__box-list{
+        margin-top: -5px;
+        gap: 19px;
+    }
+    .services__list-item{
+        border: 2px solid rgba(22, 22, 22, 0.08);
+        line-height: 20px;
+        padding: 20px 40px;
+        &--flash::after{
+            background-image: url(../images/icon-flash-min.svg);
+            width: 53px;
+            height: 53px;
+            top: 85px;
+            left: 137px;
+        }
+        &--maintenance::after{
+            background-image: url(../images/icon-joystick-min.svg);
+            width: 52px;
+            height: 52px;
+            top: -64px;
+            left: 137px;
+        }
+    }
+    .request__left-text{
+        font-size: 16px;
+        width: 600px;
+    }
+
+    .request__right-text{
+        width: 500px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .request__form-input{
+        width: 500px;
+        &::placeholder{
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+    .request__form-area{
+        width: 500px;
+    }
+}
+
+@media(max-width: 1380px) {
+
+    .problems__inner {
+        gap: 270px;
+    }
+    .problems__title::before {
+        width: 1270px;
+        height: 535px;
+        margin: 35px -95px;
+    }
+    .problems__box-list {
+        margin-left: 15px;
+    }
+
+    .help__title {
+        margin-bottom: 70px;
+    }
+
+    .stages__title {
+        padding-top: 60px;
+    }
+
+    .stages__list{
+        margin-left: 85px;
+    }
+
+    .services__box{
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 1260px){
+    .problems__title::before {
+        width: 1195px;
+        margin: 48px -66px;
+    }
+    .problems__inner {
+        gap: 245px;
+    }
+    .problems__dropdown {
+        width: 440px;
+        margin-top: -148px;
+    }
+    .problems__dropdown-title {
+        font-size: 20px;
+    }
+    .problems__dropdown-text {
+        font-size: 18px;
+    }
+
+    .services {
+        margin-left: -57px;
+    }
+
+}
+
+@media(max-width: 1170px){
+    .problems__title::before {
+        width: 1116px;
+        margin: 45px -20px;
+    }
+   
+    .request__left-title{
+        width: 460px;
+    }
+    .request__left-text{
+        width: 460px;
+    }
+    .request__form-input{
+        width: 460px;
+        &::placeholder{
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+    .request__form-area{
+        width: 460px;
     }
 }
