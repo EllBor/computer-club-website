@@ -71,20 +71,21 @@
 }
 
 .rightside-menu {
+  background: linear-gradient(to bottom right, #161616 60%, #4f4feb);
   position: absolute;
   z-index: 15;
   right: 0;
   top: 0;
   bottom: 0;
   max-width: 280px;
-  max-height: 375px;
+  max-height: 385px;
   width: 100%;
   background-color: #161616;
   padding-top: 40px;
   box-shadow: -2px 3px 17px 0px #000;
   transition: all 0.5s;
   &.rightside-menu--close {
-    transform: translateX(500%);
+    display: none;
   }
   &__close {
     background-color: transparent;
@@ -182,7 +183,7 @@
 
   &__title {
     @extend %title-style;
-    width: 555px;
+    max-width: 555px;
     margin-top: 70px;
     &::before {
       content: "";
@@ -463,12 +464,12 @@
 }
 
 .stages {
-  margin-top: 50px;
+  background: linear-gradient(to top right, #161616 70%, #4f4feb);
   &__title {
     @extend %title-style;
     margin: 0 auto;
     text-align: center;
-    padding-top: 90px;
+    padding-top: 100px;
   }
 
   &__list {
@@ -588,6 +589,7 @@
 }
 
 .footer {
+  background: linear-gradient(to bottom left, #161616 70%, #4f4feb);
   padding-top: 85px;
   padding-bottom: 55px;
   &__inner {
@@ -968,7 +970,7 @@
 
   .problems {
     &__title::before {
-      width: 978px;
+      max-width: 998px;
       margin-left: -72px;
     }
 
@@ -1002,6 +1004,10 @@
       font-size: 18px;
       padding-bottom: 10px;
       line-height: 25px;
+    }
+
+    &__dropdown {
+      margin-top: -54px;
     }
 
     &__box-list {
@@ -1265,5 +1271,149 @@
 
   .request__right-text {
     max-width: 530px;
+  }
+}
+
+@media (max-width: 660px) {
+  .container {
+    max-width: 480px;
+  }
+  .problems__title {
+    font-size: 22px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .problems__solve-text {
+    font-size: 20px;
+    max-width: 460px;
+  }
+  .problems__box-list {
+    flex-direction: column;
+  }
+  .help__title {
+    font-size: 22px;
+    max-width: 460px;
+  }
+  .services__title,
+  .stages__title,
+  .request__left-title {
+    font-size: 26px;
+    max-width: 460px;
+  }
+  .request__right-text {
+    max-width: 460px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 350px;
+  }
+  .top {
+    &__inner {
+      justify-content: flex-start;
+    }
+    &__content-title {
+      line-height: 34px;
+      min-width: 350px;
+      font-size: 25px;
+    }
+    &__content-text {
+      font-size: 24px;
+      margin-bottom: 34px;
+    }
+  }
+
+  .problems {
+    &__title {
+      font-size: 20px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    &__solve-text {
+      font-size: 20px;
+      max-width: 360px;
+    }
+    &__box-list {
+      flex-direction: column;
+    }
+
+    &__dropdown-text {
+      font-size: 16px;
+      max-width: 360px;
+    }
+    &__dropdown-title {
+      font-size: 18px;
+      max-width: 360px;
+      line-height: 20px;
+    }
+
+    &__dropdown {
+      max-width: 340px;
+      margin: 49px auto;
+      text-align: center;
+    }
+
+    &__list-item {
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .help {
+    &__title {
+      font-size: 22px;
+      max-width: 360px;
+    }
+    &__list-item {
+      max-width: 360px;
+      &:nth-child(even) {
+        margin-left: 0px;
+        text-align: left;
+      }
+      &:nth-child(odd) {
+        margin-left: 0px;
+        text-align: left;
+      }
+    }
+
+    &__list {
+      justify-content: start;
+      margin-left: 50px;
+    }
+  }
+
+  .services__title,
+  .stages__title,
+  .request__left-title {
+    font-size: 22px;
+    max-width: 360px;
+  }
+
+  .request {
+    &__right-text {
+      max-width: 360px;
+      line-height: 18px;
+    }
+
+    &__form-input {
+      max-width: 340px;
+    }
+
+    &__form-area {
+      max-width: 340px;
+      height: 80px;
+      margin-bottom: 32px;
+      padding: 16px 23px 11px 16px;
+    }
+  }
+
+  .stages__list {
+    margin-left: 50px;
+  }
+
+  .footer__social {
+    flex-direction: column;
   }
 }

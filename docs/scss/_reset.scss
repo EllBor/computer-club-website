@@ -1,10 +1,10 @@
-html{
+html {
   box-sizing: border-box;
 }
 
 *,
 *::after,
-*::before{
+*::before {
   box-sizing: inherit;
 }
 
@@ -49,11 +49,13 @@ select {
   font: inherit;
 }
 
-input:active, :hover, :focus {
+input:active,
+:hover,
+:focus {
   outline: 0;
   outline-offset: 0;
 }
 
-a{
+a {
   text-decoration: none;
 }
